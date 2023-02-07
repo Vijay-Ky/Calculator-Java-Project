@@ -18,6 +18,7 @@ public class Calculator
 		
 		try
 		{
+			loop1:
 			while(choice != 5)
 			{
 				System.out.println("\n1 - Addition");
@@ -32,7 +33,14 @@ public class Calculator
 				if(choice <= 0 || choice > 5)
 				{
 					System.out.println("\n Please Select the Available Choice!");
-					
+					continue loop1;
+				}
+				
+				
+				if(choice == 5)
+				{
+					System.out.println("\nThanks for using");
+					System.exit(0);
 				}
 			
 					System.out.println("\nEnter First value");
@@ -40,12 +48,6 @@ public class Calculator
 					
 					System.out.println("\nEnter Second value");
 					n2 = input.nextFloat();
-				
-				if(choice == 5)
-				{
-					System.out.println("\nThanks for using");
-					System.exit(0);
-				}
 				
 				if(choice == 1)
 				{
